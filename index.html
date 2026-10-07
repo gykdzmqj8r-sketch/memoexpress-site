@@ -3,28 +3,124 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MemoExpress</title>
-<meta name="description" content="Páginas públicas da extensão MemoExpress.">
+<title>MemoExpress · Anotações rápidas no Chrome</title>
+<meta name="description" content="MemoExpress é uma extensão para Google Chrome para anotações rápidas, tarefas, tags e prints de tela. Plano Premium por R$ 89 por ano.">
 <style>
-  :root { --bg: #fbf6ee; --paper: #ffffff; --ink: #1f1b13; --muted: #5f5748; --line: #e6dac4; --accent: #7b5800; }
+  :root {
+    --bg: #fbf8f2; --paper: #ffffff; --text: #2b2418; --muted: #6b5f4c; --accent: #7b5800;
+    --accent-soft: #fff1d6; --line: #ecdfc6; --soft: #f6f0e4; --on-accent: #ffffff;
+  }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #17140f; --paper: #211d16; --ink: #efe6d8; --muted: #b9ae9b; --line: #3a3326; --accent: #f2c35b; }
+    :root { --bg: #16130e; --paper: #1e1a13; --text: #f0e9dc; --muted: #b8aa92; --accent: #f1c26b;
+            --accent-soft: #2c2415; --line: #3a3122; --soft: #221d15; --on-accent: #1a1409; }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-  main { max-width: 520px; width: 100%; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 28px 24px; }
-  .brand { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
-  h1 { font-size: 24px; margin: 6px 0 8px; }
-  p { color: var(--muted); margin: 0 0 18px; }
-  a { color: var(--accent); font-weight: 600; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 880px; margin: 0 auto; padding: 24px 16px 64px; }
+  a { color: var(--accent); }
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--text); text-decoration: none; }
+  .logo { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #f8bd49, #c78a00);
+          display: grid; place-items: center; flex: none; }
+  .logo::before { content: "M"; color: #fff; font-weight: 800; font-size: 20px; line-height: 1; }
+  .top nav { display: flex; gap: 14px; font-size: 14px; }
+  h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.12; margin: 40px 0 12px; text-wrap: balance; letter-spacing: -0.01em; }
+  h2 { font-size: 22px; margin: 0 0 12px; text-wrap: balance; }
+  h3 { font-size: 16px; margin: 0 0 4px; }
+  .lead { font-size: 18px; color: var(--muted); max-width: 60ch; margin: 0; }
+  section { margin-top: 56px; }
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .plan { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+  .plan.featured { border: 2px solid var(--accent); }
+  .price { font-size: 30px; font-weight: 800; margin: 4px 0 2px; }
+  .price small { font-size: 14px; font-weight: 600; color: var(--muted); }
+  .plan p { color: var(--muted); margin: 0 0 10px; }
+  ul.check { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+  ul.check li { padding-left: 24px; position: relative; }
+  ul.check li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 800; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .card p { margin: 0; color: var(--muted); }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 </style>
 </head>
 <body>
 <main>
-  <div class="brand">MemoExpress</div>
-  <h1>Anotações rápidas no navegador</h1>
-  <p>Extensão para Google Chrome com anotações, tarefas e prints de tela.</p>
-  <a href="privacidade.html">Política de Privacidade →</a>
+  <div class="top">
+    <a class="brand" href="./"><span class="logo" aria-hidden="true"></span>MemoExpress</a>
+    <nav><a href="privacidade.html">Privacidade</a></nav>
+  </div>
+
+  <h1>Anote na hora, sem sair da página.</h1>
+  <p class="lead">O MemoExpress é uma extensão para Google Chrome para anotações rápidas, tarefas, tags e prints de tela. Abre no ícone, no painel lateral ou numa janela flutuante, e tudo fica guardado no seu navegador.</p>
+
+  <section aria-labelledby="planos">
+    <h2 id="planos">Planos</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Gratuito</h3>
+        <div class="price">R$ 0</div>
+        <p>Anotar e organizar é grátis, sempre.</p>
+        <ul class="check">
+          <li>Anotações com títulos, listas, tabelas e checklists</li>
+          <li>Tarefas e tags</li>
+          <li>Janela flutuante e painel lateral</li>
+          <li>Print da aba ou da tela, copiado para colar onde quiser</li>
+          <li>Português, inglês e espanhol</li>
+        </ul>
+      </div>
+      <div class="plan featured">
+        <h3>Premium</h3>
+        <div class="price">R$ 89 <small>por ano</small></div>
+        <p>Tudo do gratuito, mais:</p>
+        <ul class="check">
+          <li>Temas de cor e modo escuro</li>
+          <li>Sincronização com o Google Drive</li>
+          <li>Prints salvos direto na anotação e baixados</li>
+          <li>Uso em até dois navegadores</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="assinatura">
+    <h2 id="assinatura">Assinatura e cancelamento</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Assinar</h3>
+        <p>Pela própria extensão, em Ajustes → Premium. O pagamento é anual, com renovação automática, e processado pela Stripe. O Premium é liberado assim que o pagamento é confirmado.</p>
+      </div>
+      <div class="card">
+        <h3>Gerenciar ou cancelar</h3>
+        <p>Em Ajustes → Premium → Gerenciar assinatura, com o e-mail usado na compra, você vê faturas, troca o cartão ou cancela. O cancelamento vale no fim do período pago: o Premium continua até lá e a renovação não é cobrada.</p>
+      </div>
+      <div class="card">
+        <h3>Arrependimento</h3>
+        <p>Você pode desistir da compra em até 7 dias depois do pagamento e receber o valor de volta (art. 49 do Código de Defesa do Consumidor). Basta escrever para o contato abaixo.</p>
+      </div>
+      <div class="card">
+        <h3>Suas anotações</h3>
+        <p>Nada é apagado quando a assinatura termina. As anotações continuam no navegador, e os recursos Premium voltam ao assinar de novo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="suporte">
+    <h2 id="suporte">Suporte e privacidade</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Suporte</h3>
+        <p>Pelo e-mail <a href="mailto:pereirlucas@gmail.com">pereirlucas@gmail.com</a>.</p>
+      </div>
+      <div class="card">
+        <h3>Privacidade</h3>
+        <p>Suas anotações ficam no seu navegador. Sem anúncios e sem rastreamento. Veja a <a href="privacidade.html">política de privacidade</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>MemoExpress · desenvolvido por Lucas Pereira de Oliveira, no Brasil.</footer>
 </main>
 </body>
 </html>
