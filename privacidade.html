@@ -88,7 +88,7 @@
   <header>
     <div class="brand">MemoExpress</div>
     <h1>Política de Privacidade</h1>
-    <p class="updated">Última atualização: 7 de outubro de 2026</p>
+    <p class="updated">Última atualização: 8 de outubro de 2026</p>
   </header>
 
   <section class="summary" aria-labelledby="resumo">
@@ -97,7 +97,7 @@
       <li>Suas anotações ficam <strong>no seu navegador</strong>.</li>
       <li>Nada do que você escreve é enviado para nós.</li>
       <li>Se você ativar a sincronização, uma cópia vai para uma <strong>pasta oculta do seu próprio Google Drive</strong>, que só a extensão acessa.</li>
-      <li>Só recebemos dados se você assinar o <strong>MemoExpress Premium</strong>: a chave da licença, um identificador aleatório desta instalação e o e-mail usado no pagamento.</li>
+      <li>Só recebemos dados se você assinar o <strong>MemoExpress Premium</strong>: a chave da licença, um identificador aleatório desta instalação e o e-mail usado no pagamento — e, se você escrever pelo chat de suporte, as mensagens que enviar.</li>
       <li>Não usamos ferramentas de análise, anúncios ou rastreadores, e não vendemos dados.</li>
     </ul>
   </section>
@@ -111,6 +111,7 @@
     <li><strong>Prints de tela:</strong> ao usar “Print da aba” ou “Print da tela”, a imagem é capturada e editada no seu computador. Ela só é guardada se você a inserir numa anotação, ou copiada se você escolher copiar para a área de transferência.</li>
     <li><strong>Texto salvo pelo menu do botão direito:</strong> ao usar “Salvar seleção no MemoExpress”, guardamos na anotação o texto selecionado, o endereço (URL) e o título da página de origem.</li>
     <li><strong>Assinatura Premium (opcional):</strong> se você assinar, tratamos os dados de pagamento e de licença descritos nos itens 6 e 7.</li>
+    <li><strong>Mensagens ao suporte (opcional):</strong> o que você escrever no chat de suporte, como descrito no item 8.</li>
     <li><strong>Endereço da aba atual:</strong> é consultado apenas para saber se a página pode ser fotografada ou receber a janela flutuante. Esse endereço não é guardado nem enviado, exceto no caso do texto salvo pelo menu, descrito acima.</li>
   </ul>
   <p>O MemoExpress <strong>não coleta</strong> o conteúdo das suas anotações, seu histórico de navegação, sua localização nem o conteúdo das páginas que você visita além do que você mesmo seleciona ou fotografa. Sem assinatura, também não coleta seu nome nem seu e-mail.</p>
@@ -123,7 +124,7 @@
   <ul>
     <li><strong>Google</strong>: Google Drive, somente se você conectar. A cópia fica sujeita à <a href="https://policies.google.com/privacy?hl=pt-BR" rel="noopener">Política de Privacidade do Google</a>.</li>
     <li><strong>Stripe</strong>: processa os pagamentos do Premium (<a href="https://stripe.com/br/privacy" rel="noopener">Política de Privacidade da Stripe</a>).</li>
-    <li><strong>Supabase</strong>: hospeda o banco de dados e a função que confere as licenças.</li>
+    <li><strong>Supabase</strong>: hospeda o banco de dados, a função que confere as licenças e as mensagens do chat de suporte.</li>
   </ul>
   <p>Esses provedores podem tratar dados fora do Brasil, com salvaguardas próprias (transferência internacional, art. 33 da LGPD). Não vendemos, não alugamos e não compartilhamos dados para publicidade. Podemos divulgar dados quando exigido por lei ou por ordem de autoridade competente.</p>
 
@@ -147,7 +148,10 @@
   </ul>
   <p>Guardamos esses dados, as datas de ativação e da última validação e o histórico de ativações e desativações, para aplicar o limite de dois navegadores ativos por licença. Não coletamos identificadores de hardware, endereços das páginas que você visita nem o conteúdo das suas anotações. Bases legais (LGPD): execução de contrato (art. 7º, V) para pagamento, licença e validação; legítimo interesse (art. 7º, IX) para segurança e prevenção de uso indevido, como o limite de navegadores; consentimento (art. 7º, I) para a conexão com o Google Drive, que você pode revogar quando quiser.</p>
 
-  <h2>8. Permissões da extensão e por que existem</h2>
+  <h2>8. Chat de suporte</h2>
+  <p>O suporte é feito pelo chat da própria extensão, em Ajustes → Premium, para quem assina o Premium e para quem tentou ativar a assinatura e não conseguiu — nesse caso, a extensão cria uma chave de atendimento aleatória, que identifica a conversa e passa a ser a chave da licença se você assinar. Ao enviar uma mensagem, guardamos no nosso servidor o texto que você escreveu, a chave da licença (para encontrar a sua assinatura e os seus navegadores), o identificador aleatório desta instalação, a versão da extensão e a data. As respostas do suporte ficam junto da conversa. Enquanto há conversa recente, a extensão consulta o servidor para saber se chegou resposta; essa consulta envia apenas a chave da licença. Usamos as mensagens só para atender você (base legal: execução de contrato, art. 7º, V). Não escreva no chat senhas, dados de cartão ou outras informações sensíveis.</p>
+
+  <h2>9. Permissões da extensão e por que existem</h2>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Permissão</th><th>Para que serve</th></tr></thead>
@@ -165,24 +169,25 @@
     </table>
   </div>
 
-  <h2>9. Por quanto tempo os dados ficam guardados e como apagá-los</h2>
+  <h2>10. Por quanto tempo os dados ficam guardados e como apagá-los</h2>
   <ul>
     <li><strong>Anotações excluídas</strong> vão para a lixeira da extensão e são apagadas de vez após 7 dias.</li>
     <li><strong>Desinstalar a extensão</strong> remove os dados guardados no navegador.</li>
     <li><strong>Licença, compra e navegadores</strong> ficam guardados enquanto a licença existir e pelo prazo necessário para cumprir obrigações legais e fiscais. Os registros de pagamento mantidos pela Stripe seguem a política da Stripe.</li>
+    <li><strong>Mensagens do suporte</strong> ficam guardadas enquanto a licença existir, para dar continuidade ao atendimento. Na extensão, uma conversa resolvida deixa de aparecer depois de 7 dias. Para apagar as suas mensagens antes disso, escreva para o contato do item 1.</li>
     <li><strong>Desconectar o Google Drive</strong> faz a extensão parar de sincronizar, mas a cópia continua no seu Drive. Para apagá-la, abra o Google Drive → Configurações → Gerenciar apps → MemoExpress → Opções → excluir os dados ocultos do app. Para revogar o acesso, visite <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.</li>
   </ul>
 
-  <h2>10. Segurança</h2>
+  <h2>11. Segurança</h2>
   <p>Os dados locais ficam protegidos pelo perfil do Chrome no seu computador, e a sincronização usa conexão criptografada com o Google. Nenhum método de armazenamento é totalmente infalível; recomendamos proteger o acesso ao seu computador e à sua conta Google.</p>
 
-  <h2>11. Seus direitos</h2>
+  <h2>12. Seus direitos</h2>
   <p>Você tem os direitos previstos na Lei Geral de Proteção de Dados (Lei nº 13.709/2018), como acessar, corrigir e excluir seus dados. As anotações ficam sob o seu controle — no navegador e, se você quiser, no seu Drive —, e você pode exercer esses direitos diretamente pela extensão. Para os dados da assinatura, escreva para o contato do item 1, de preferência informando a chave da licença ou o e-mail usado na compra; respondemos em até 15 dias. Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).</p>
 
-  <h2>12. Crianças</h2>
+  <h2>13. Crianças</h2>
   <p>O MemoExpress não é direcionado a crianças e não coleta intencionalmente dados de menores.</p>
 
-  <h2>13. Mudanças nesta política</h2>
+  <h2>14. Mudanças nesta política</h2>
   <p>Se esta política mudar, a versão atualizada será publicada nesta página com a nova data. Mudanças importantes também serão avisadas na página da extensão na Chrome Web Store.</p>
 
   <footer>
