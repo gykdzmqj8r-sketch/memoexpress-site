@@ -42,6 +42,10 @@
   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
   .card { background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
   .card p { margin: 0; color: var(--muted); }
+  .install { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; padding: 12px 20px; border-radius: 999px;
+             background: var(--accent); color: var(--on-accent); font-weight: 700; text-decoration: none; }
+  .install:hover { filter: brightness(1.08); }
+  .install-note { display: block; margin-top: 8px; font-size: 14px; color: var(--muted); }
   footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 </style>
 </head>
@@ -54,6 +58,8 @@
 
   <h1>Anote na hora, sem sair da página.</h1>
   <p class="lead">O MemoExpress é uma extensão para Google Chrome para anotações rápidas, tarefas, tags e prints de tela. Abre no ícone, no painel lateral ou numa janela flutuante, e tudo fica guardado no seu navegador.</p>
+  <a class="install" href="https://chromewebstore.google.com/detail/oiloglmhkghoojdlammdacfkbkimmhhc">Adicionar ao Chrome</a>
+  <span class="install-note">Grátis na Chrome Web Store · até 20 anotações</span>
 
   <section aria-labelledby="planos">
     <h2 id="planos">Planos</h2>
